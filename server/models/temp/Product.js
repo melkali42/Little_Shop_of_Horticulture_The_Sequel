@@ -1,15 +1,17 @@
 const { Schema, model } = require('mongoose');
 
-// create products schema, probably should create helper function for timestamp
+// create products schema, added purchaser array to keep track of who has purchased the product and careTips array to keep track of care tips for the product
 const productSchema = new Schema({
     name: {
         type: String,
         trim: true,
     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
+    purchaser: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }
+    ],
     careTips: [
         {
             type: Schema.Types.ObjectId,

@@ -27,9 +27,23 @@ const userSchema = new Schema({
     products: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Products'
+            ref: 'Product'
         },
     ],
+    careTips: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'CareTip'
+        },
+    ],
+    location: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 // function that should run before db is saved

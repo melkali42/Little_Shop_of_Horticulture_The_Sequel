@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "Seymour",
+        "lastName": "Krelborn",
+        "email": "plant_enjoyer@email.com",
+        "password": "iloveplants"
+    },
+    {
+        "firstName": "Audrey",
+        "lastName": "Plant",
+        "email": "people_enjoyer@email.com",
+        "password": "feedme"
+    },
+    {
+        "firstName": "Orin",
+        "lastName": "Scivello",
+        "email": "biker_dentist@email.com",
+        "password": "ilikep@in"
+    }
+]
