@@ -2,6 +2,7 @@ const { Schema, model } =  require('mongoose');
 
 // Create schema for users with Products model referenced, should add bcrypt to passwords
 // find a way to not transmit hashed password?
+// add virtuals to count Products
 const userSchema = new Schema({
     firstName: {
         type: String,

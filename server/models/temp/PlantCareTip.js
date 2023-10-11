@@ -5,6 +5,8 @@ const { Schema, model } = require('mongoose');
 const careTipSchema = new Schema({
     tip: {
         type: String,
+        minlength: 1,
+        maxlength: 280,
     },
     tipAuthor: {
         type: String,

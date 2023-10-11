@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 // create products schema, probably should create helper function for timestamp
+// add virtual to count careTips
 const productSchema = new Schema({
     name: {
         type: String,
