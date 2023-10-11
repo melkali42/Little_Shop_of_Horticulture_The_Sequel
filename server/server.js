@@ -4,10 +4,11 @@ require('dotenv').config();
 const { ApolloServer } = require('apollo-server-express');
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema/schema');
-
+constconnectDB = require('./config/db');
 // Import the two parts of a GraphQL schema
 const typeDefs = require('./schema');
 const db = require('./config/connection');
+const connectDB = require('./config/db');
 
 const PORT = process.env.PORT || 5000;
 const server = new ApolloServer({
@@ -16,6 +17,9 @@ const server = new ApolloServer({
     });
 
 const app = express();
+
+//Connect to database
+connectDB();
 
 app.use('graphql', graphqlHTTP({
     schema,
