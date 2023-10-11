@@ -2,7 +2,7 @@ const { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLSchema } = require('
 
 //Client type
 const ClientType = new GraphQLObjectType({
-    name: 'Client',
+    name: 'Client', //plants arrays to be added**
     fields: () => ({
         id: { type: GraphQLID },
         name: { type: GraphQLString },
@@ -16,7 +16,13 @@ const ClientType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
-        client: {
+        clients: { //all plants to be added**
+            type: new GraphQLList(ClientType),
+            resolve(parent, args) {
+                return Client.find({});
+            }
+        },
+        client: { //plant
             type: ClientType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
