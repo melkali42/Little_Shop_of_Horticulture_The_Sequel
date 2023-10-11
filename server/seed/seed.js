@@ -20,4 +20,15 @@ db.once('open', async () => {
             { $addToSet: { products: _id } }
        ) 
     }
+
+    // add care tips to products
+    // find careTip id and author and associate with product
+    const products = await Product.insertMany(productSeed);
+    for (var i = 0; i < careTipSeed.length; i++) {
+        const { _id, tipAuthor } = await CareTip.create(careTipSeed[i]);
+        await Product.findOneAndUpdate(
+            { purchaser: tipAuthor },
+            ( { $addToSet: { careTips: _id}})
+        ) 
+    }
 })
