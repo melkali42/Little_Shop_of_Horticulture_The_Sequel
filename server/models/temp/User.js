@@ -2,7 +2,7 @@ const { Schema, model } =  require('mongoose');
 
 // Create schema for users with Products model referenced, should add bcrypt to passwords
 // find a way to not transmit hashed password?
-// add virtuals to count Products
+// add virtuals to get full name and to get all products and care tips for a user
 const userSchema = new Schema({
     firstName: {
         type: String,
@@ -28,10 +28,38 @@ const userSchema = new Schema({
     products: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Products'
+            ref: 'Product'
         },
     ],
-});
+    careTips: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'CareTip'
+        },
+    ],
+    location: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    cart: {
+        type: Array,
+        default: []
+    },
+
+}, { toJSON: { virtuals: true}});
+
+// virtual to get full name
+userSchema.virtual('fullName').get(function () {
+    return `${this.firstName} ${this.lastName}`;
+}).set(function (v) {
+    const firstName = v.split(' ')[0];
+    const lastName = v.split(' ')[1];
+    this.set({ firstName, lastName });
+})
 
 // function that should run before db is saved
 userSchema.pre('save', async function (next) {

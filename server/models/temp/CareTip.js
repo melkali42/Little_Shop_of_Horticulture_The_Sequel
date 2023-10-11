@@ -8,6 +8,7 @@ const careTipSchema = new Schema({
         minlength: 1,
         maxlength: 280,
     },
+    // maybe this should be a reference to the user who posted the tip?
     tipAuthor: {
         type: String,
         required: true,
