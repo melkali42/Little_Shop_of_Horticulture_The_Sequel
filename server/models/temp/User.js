@@ -1,4 +1,5 @@
 const { Schema, model } =  require('mongoose');
+const bcrypt = require('bcrypt');
 
 // Create schema for users with Products model referenced, should add bcrypt to passwords
 // find a way to not transmit hashed password?
@@ -18,7 +19,7 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        match: [/.+@+\..+/, 'Please provide a valid email address.']
+        match: [/.+@.+\..+/, 'Please provide a valid email address.']
     },
     password: {
         type: String,

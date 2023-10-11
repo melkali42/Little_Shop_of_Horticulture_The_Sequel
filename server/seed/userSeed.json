@@ -2,7 +2,7 @@
     {
         "firstName": "Seymour",
         "lastName": "Krelborn",
-        "email": "plant_enjoyer@email.com",
+        "email": "plant.enjoyer@email.com",
         "password": "iloveplants",
         "products": [],
         "careTips": [],
@@ -11,8 +11,8 @@
     {
         "firstName": "Audrey",
         "lastName": "Plant",
-        "email": "people_enjoyer@email.com",
-        "password": "feedme",
+        "email": "people.enjoyer@email.com",
+        "password": "feedme33",
         "products": [],
         "careTips": [],
         "location": "New York, NY"
@@ -20,7 +20,7 @@
     {
         "firstName": "Orin",
         "lastName": "Scivello",
-        "email": "biker_dentist@email.com",
+        "email": "biker.dentist@email.com",
         "password": "ilikep@in",
         "products": [],
         "careTips": [],
