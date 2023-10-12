@@ -1,11 +1,14 @@
 [
     {
-        "tip": "Tip 1"
+        "tipBody": "Tip 1",
+        "tipAuthor": "plant.enjoyer1@email.com"
     },
     {
-        "tip": "Tip 2"
+        "tipBody": "Tip 2",
+        "tipAuthor": "plant.enjoyer2@email.com"
     },
     {
-        "tip": "Tip 3"
+        "tipBody": "Tip 3",
+        "tipAuthor": "biker.dentist@email.com"
     }
 ]

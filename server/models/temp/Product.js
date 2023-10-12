@@ -1,23 +1,31 @@
 const { Schema, model } = require('mongoose');
+const CareTip = require('./CareTip');
 
-// create products schema, added purchaser array to keep track of who has purchased the product and careTips array to keep track of care tips for the product
+// instead of having a separate care tips model, we can just add care tips to the products model? 
+// might need to revise models
+// revised to match seed file
 const productSchema = new Schema({
     name: {
         type: String,
         trim: true,
     },
-    purchaser: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'User'
-        }
-    ],
-    careTips: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'PlantCareTips'
-        },
-    ],
+    description: {
+        type: String,
+        trim: true,
+    },
+    difficulty_level: {
+        type: String,
+        trim: true,
+    },
+    price: {
+        type: Number,
+        required: true,
+        min: 0.99
+    },
+    image_url: {
+        type: String,
+    },
+    careTips: [CareTip.schema],
 });
 
 const Product = model('Product', productSchema);

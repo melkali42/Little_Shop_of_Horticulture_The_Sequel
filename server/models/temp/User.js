@@ -1,9 +1,10 @@
 const { Schema, model } =  require('mongoose');
 const bcrypt = require('bcrypt');
+const Order = require('./Order')
 
-// Create schema for users with Products model referenced, should add bcrypt to passwords
 // find a way to not transmit hashed password?
 // add virtuals to get full name and to get all products and care tips for a user
+// might need to revise to add order history
 const userSchema = new Schema({
     firstName: {
         type: String,
@@ -26,18 +27,8 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
-    products: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Product'
-        },
-    ],
-    careTips: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'CareTip'
-        },
-    ],
+    // this should show all products purchased by the user (order history)
+    order: [Order.schema],
     location: {
         type: String,
         required: true,
@@ -46,21 +37,14 @@ const userSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    cart: {
-        type: Array,
-        default: []
-    },
 
-}, { toJSON: { virtuals: true}});
-
-// virtual to get full name
-userSchema.virtual('fullName').get(function () {
-    return `${this.firstName} ${this.lastName}`;
-}).set(function (v) {
-    const firstName = v.split(' ')[0];
-    const lastName = v.split(' ')[1];
-    this.set({ firstName, lastName });
-})
+    }, 
+    { 
+        toJSON: { 
+            virtuals: true
+        }, 
+        id: false 
+});
 
 // function that should run before db is saved
 userSchema.pre('save', async function (next) {
@@ -76,6 +60,15 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
 };
+
+// virtual to get full name
+userSchema.virtual('fullName').get(function () {
+    return `${this.firstName} ${this.lastName}`;
+}).set(function (v) {
+    const firstName = v.split(' ')[0];
+    const lastName = v.split(' ')[1];
+    this.set({ firstName, lastName });
+})
 
 const User = model('User', userSchema);
 
