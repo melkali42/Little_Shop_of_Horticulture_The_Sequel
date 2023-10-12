@@ -5,11 +5,13 @@ const productSeed = require('./productSeed.json');
 const careTipSeed = require('./careTipSeed.json');
 
 // this seed file can be clarified, the for loop is confusing
+// added Order model to seed file
 db.once('open', async () => {
     try {
       await User.deleteMany({});
       await Product.deleteMany({});
-      // await CareTip.deleteMany({});
+      await CareTip.deleteMany({});
+      // await Order.deleteMany({});
 
       await User.create(userSeed);
       console.log('users seeded');
@@ -19,6 +21,25 @@ db.once('open', async () => {
 
       await CareTip.create(careTipSeed);
       console.log('care tips seeded');
+      
+      // instead of adding separate Order model, add order history to User model
+      await User.create({
+        firstName: "Wink",
+        lastName: "Winkerson",
+        email: "w.winkerson@email.com",
+        password: "b@ckground",
+        order: [productSeed[0]],
+        location: "New York, NY"
+      })
+      /* await Order.insertMany({
+        products: [
+            productSeed[0],
+            productSeed[1],
+            productSeed[2],
+            productSeed[3],
+            ]
+        }); */
+      console.log('order seeded');
       
       /*
       // loop through productSeed and create a new product for each
