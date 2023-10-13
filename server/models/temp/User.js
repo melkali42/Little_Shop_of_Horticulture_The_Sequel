@@ -65,9 +65,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
 userSchema.virtual('fullName').get(function () {
     return `${this.firstName} ${this.lastName}`;
 }).set(function (v) {
-    const firstName = v.split(' ')[0];
-    const lastName = v.split(' ')[1];
-    this.set({ firstName, lastName });
+    const { firstName, lastName } = v.split(' ');
+    this.firstName = firstName;
+    this.lastName = lastName;
 })
 
 const User = model('User', userSchema);
