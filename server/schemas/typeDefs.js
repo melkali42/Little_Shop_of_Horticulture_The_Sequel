@@ -7,12 +7,12 @@ type User {
     password: String!
     order: [Order]
     location: String
-    createdAt: Date
+    
 }
 type Tips {
     tip: String
     tipAuthor: String
-    createdAt: Date
+    
 }
 type Product {
     name: String
@@ -20,7 +20,6 @@ type Product {
     careTips: [Tips]
 }
 type Order {
-    purchaseDate: Date
     products: [Product]
 }
 type Auth {
