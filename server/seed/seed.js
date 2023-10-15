@@ -28,9 +28,10 @@ db.once('open', async () => {
         lastName: "Winkerson",
         email: "w.winkerson@email.com",
         password: "b@ckground",
-        order: [productSeed[0]],
+        order: [{productSeed}],
         location: "New York, NY"
       })
+      console.log({productSeed});
       /* await Order.insertMany({
         products: [
             productSeed[0],

@@ -14,7 +14,9 @@ type Tips {
     tipAuthor: String
     
 }
+## added _id ##
 type Product {
+    _id: ID
     name: String
     purchaser: [User]
     careTips: [Tips]
@@ -26,8 +28,9 @@ type Auth {
     token: ID!
     user: User
 }
+## added [] to User query ##
 type Query {
-    user: User
+    user: [User]
 }
 type Mutation {
     login(email: String!, password: String!): Auth

@@ -1,11 +1,11 @@
 const { AuthenticationError } = require('apollo-server-express');
-const User = require("../models/temp/User")
+const { User, Product, CareTip, Order } = require("../models/temp")
 const { signToken } = require("../utils/auth")
 
 
 const resolvers = {
     Query: {
-        user: async(context) => {
+        user: async(_, __, context) => {
             if(context.user){
                 const userData = await User.findOne({_id: context.user._id}).select("-__v -password")
                 return userData
@@ -13,6 +13,11 @@ const resolvers = {
             throw AuthenticationError
         
         }
+        /*
+        // find all users
+        user: async() => {
+            return User.find()
+        } */
 
     },
     Mutation: {
