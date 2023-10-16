@@ -34,7 +34,25 @@ form.addEventListener('submit', async (event) => {
 
             console.error('Stripe error:', error);
         } else {
-            // Send the token to your server for processing
+            const response = await fetch('/process-payment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ token: token.id, amount: 30, currency: 'USD' }),
+                // Placeholder, will need to update to pull actual payment amount once add to cart is ready
+            });
+
+            if (response.ok) {
+                // Payment was successful
+                // If time, add a thank you/payment success redirect
+            } else {
+                // Payment failed
+                const errorData = await response.json();
+                displayError(errorData.message);
+
+                console.error('Payment processing error:', errorData.message);
+            }
         }
     } catch (error) {
         console.error('An unexpected error occurred:', error);
