@@ -1,3 +1,17 @@
+import { addToCart, updateCartUI } from './cart';
+
+document.querySelector('#add-to-cart-button').addEventListener('click', () => {
+    const productDetails = {
+        id: 1,
+        name: 'Product Name',
+        price: 19.99,
+    };
+
+    addToCart(productDetails);
+});
+
+updateCartUI();
+
 const stripe = Stripe('pk_test_51NzrhlK6KnLQXk3Mf37SdygAwYl5LoYDejbDVwIbnQXfVVQ95agwqGIjHQO2mBaKICtxFBRa9uj7SUN6Ab2FkllM00l8VJuB42', {
     locale: 'en',
     style: {
