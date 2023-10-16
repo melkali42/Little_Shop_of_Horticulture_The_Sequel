@@ -1,1 +1,0 @@
-const { useStripe, useElements } = require('@stripe/react-stripe-js');

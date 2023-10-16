@@ -44,6 +44,6 @@ form.addEventListener('submit', async (event) => {
 
 function displayError(error) {
     if (errorElement) {
-        errorElement.textContent = error.message || error;
+        errorElement.textContent = errorElement.textContent = error;
     }
 }
