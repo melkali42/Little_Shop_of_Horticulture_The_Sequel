@@ -8,8 +8,16 @@ module.exports = {
     authMiddleware: function ({ req }) {
         let token = req.body.token || req.query.token || req.headers.authorization;
         
-        if (req.headers.authorization) {
-            token = token.split(' ').pop().trim();
+        if (token) {
+            // split token into string array
+            const list = token.split(' ');
+            const type = list[0];
+            token = list[1].trim();
+
+            // check token type, if there is no token, return request object as is
+            if (type !== 'Bearer') {
+                return req;
+            }
         }
 
         if (!token) {

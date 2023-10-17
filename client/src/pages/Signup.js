@@ -7,8 +7,8 @@ import { ADD_USER } from '../utils/mutations'; // write mutation to add user to 
 // this logic will create a signup page that will allow users to create an account, will need to create mutation to add user to database
 
 export default function Signup(props) {
-    const [formState, setFormState] = useState({ email: '', password: '' });
-    const [addUser, { error, data }] = useMutation(ADD_USER); 
+    const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '', password: '' });
+    const [addUser] = useMutation(ADD_USER); 
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();

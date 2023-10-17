@@ -7,7 +7,7 @@ import Auth from '../utils/clientAuth'; // write client side token authenticatio
 // this logic will create a login page that will allow users to login to their account, will need to create mutation to login user
 export default function Login(props) {
     const [formState, setFormState] = useState({ email: '', password: '' });
-    const [login, { error }] = useMutation(LOGIN);
+    const [login] = useMutation(LOGIN);
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();

@@ -25,16 +25,17 @@ type Order {
     products: [Product]
 }
 type Auth {
-    token: ID!
+    token: String
     user: User
 }
-## added [] to User query ##
+## added [] to User query to query multiple users ##
 type Query {
-    user: [User]
+    user(userId: ID!): User
+    users: [User]
 }
 type Mutation {
     login(email: String!, password: String!): Auth
-    signUp(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    signUp(firstName: String!, lastName: String!, email: String!, password: String!): User
     
 }
 

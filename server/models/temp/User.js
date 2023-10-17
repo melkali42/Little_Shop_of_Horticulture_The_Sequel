@@ -31,7 +31,7 @@ const userSchema = new Schema({
     order: [Order.schema],
     location: {
         type: String,
-        required: true,
+        // required: true,
     },
     createdAt: {
         type: Date,
