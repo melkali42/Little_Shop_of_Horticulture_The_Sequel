@@ -1,13 +1,13 @@
 import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { LOGIN } from '../utils/mutations'; // write mutation to login user
+import { LOGIN_USER } from '../utils/mutations'; // write mutation to login user
 import Auth from '../utils/clientAuth'; // write client side token authentication logic
 
 // this logic will create a login page that will allow users to login to their account, will need to create mutation to login user
 export default function Login(props) {
     const [formState, setFormState] = useState({ email: '', password: '' });
-    const [login] = useMutation(LOGIN);
+    const [login] = useMutation(LOGIN_USER);
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
