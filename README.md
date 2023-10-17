@@ -3,9 +3,9 @@
 ## Description
 An interactive full stack e-commerce plant store app is a comprehensive digital platform that offers a seamless and engaging experience for users looking to explore, purchase, and manage a wide variety of plants and related products. This application encompasses both the front-end and back-end aspects, combining user-friendly interfaces with robust functionality to create a well-rounded shopping experience. 
 
-Our motivation was to create a full stack e-commerce plant sto app that seamlessly combines user-friendly interfaces with sophisticated back-end functionality, resulting in an immersive and enjoyable platform for plant enthusiasts to explore, shop and connect with the world of plants. 
-
 The idea for this project was a sequel to Project #2 Little Shop of Horticulture. It is an E-Commerce website that will give the user advice on how to take care of and grow the plants a user wants to buy. The website also gives the user the level of difficulty level of care for each plant, gives the user plant options or suggestions based on the user’s geo-location. It is also a goal for a user to add items to the cart, and be able to pay for their purchases on the website. 
+
+Our motivation was to create a full stack e-commerce plant sto app that seamlessly combines user-friendly interfaces with sophisticated back-end functionality, resulting in an immersive and enjoyable platform for plant enthusiasts to explore, shop and connect with the world of plants. 
 
 
 ## Installation
