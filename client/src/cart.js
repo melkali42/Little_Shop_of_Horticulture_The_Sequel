@@ -3,6 +3,14 @@ const favorites = [];
 
 const cartItems = document.querySelector('.cart-items');
 
+import { fetchProducts } from './productService';
+
+fetchProducts()
+    .then((products) => {
+    // Do something with the products, e.g., display them in the cart
+});
+
+
 // Loop through the product data and create product cards
 products.forEach(product => {
     const productCard = document.createElement('li');
