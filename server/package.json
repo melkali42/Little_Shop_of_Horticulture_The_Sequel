@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "watch": "nodemon",
     "seed": "node seed/seed.js"
   },
