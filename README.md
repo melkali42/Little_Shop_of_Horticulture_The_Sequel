@@ -5,17 +5,21 @@ An interactive full stack e-commerce plant store app is a comprehensive digital 
 
 Our motivation was to create a full stack e-commerce plant sto app that seamlessly combines user-friendly interfaces with sophisticated back-end functionality, resulting in an immersive and enjoyable platform for plant enthusiasts to explore, shop and connect with the world of plants. 
 
-Our idea for this project was to 
+The idea for this project was a sequel to Project #2 Little Shop of Horticulture. It is an E-Commerce website that will give the user advice on how to take care of and grow the plants a user wants to buy. The website also gives the user the level of difficulty level of care for each plant, gives the user plant options or suggestions based on the user’s geo-location. It is also a goal for a user to add items to the cart, and be able to pay for their purchases on the website. 
+
 
 ## Installation
 
-We used CSS, React, Mongo DB, Mongoose ODM, Graph QL, Node.js, Express.js, Heroku, 
+We used CSS, React, Mongo DB, Mongoose ODM, Graph QL, Node.js, Express.js, Heroku, queries and mutations for retrieving, adding, updating, and deleting data, as well as authentication (JWT).
 
 ## Usage
 
 This is the URL for the deployed Heroku application: 
 
 This is the URL for our GitHub repository for this project:
+
+Screenshots:
+
 
 ## Credits
 
