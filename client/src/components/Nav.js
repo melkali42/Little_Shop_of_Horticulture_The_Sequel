@@ -11,16 +11,20 @@ export default function Navigation() {
     function authNav() {
         if (Auth.loggedIn()) {
             return(
-                <Container>
-                    <Navbar bg='light' expand='lg'>
+                <Navbar bg='light' expand='lg'>
+                    <Container className="justify-content-center">
                         <Nav variant='tabs'>
                             <Nav.Link as={Link} to='/'>Home</Nav.Link>
                             <Nav.Link as={Link} to='/profile'>Profile</Nav.Link>
                             <Nav.Link as={Link} to='/orders'>Orders</Nav.Link>
-                            <a href='/' onClick={() => Auth.logout()}>Logout</a> {/* this will take the user back to the homepage and refresh the app */}
                         </Nav>
-                    </Navbar>
-                </Container>
+                        <Nav>
+                            <Nav.Item>
+                                <a href='/' onClick={() => Auth.logout()} style={{right:'100px'}}>Logout</a> {/* this will take the user back to the homepage and refresh the app */}
+                            </Nav.Item> 
+                        </Nav>
+                    </Container>
+                </Navbar>
             );
         } else {
             return(

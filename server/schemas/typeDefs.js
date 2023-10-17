@@ -25,7 +25,7 @@ type Order {
     products: [Product]
 }
 type Auth {
-    token: String
+    token: ID
     user: User
 }
 ## added [] to User query to query multiple users ##
@@ -35,9 +35,8 @@ type Query {
 }
 type Mutation {
     login(email: String!, password: String!): Auth
-    signUp(firstName: String!, lastName: String!, email: String!, password: String!): User
+    signUp(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     
 }
-
 `;
 module.exports = typeDefs

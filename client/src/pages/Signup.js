@@ -20,7 +20,7 @@ export default function Signup(props) {
                 lastName: formState.lastName,
             },
         });
-        const token = mutationResponse.data.addUser.token;
+        const token = mutationResponse.data.signUp.token;
         Auth.login(token);
     }
 
