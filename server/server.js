@@ -28,13 +28,13 @@ app.use('graphql', graphqlHTTP({
     
 
 // Add middleware to integrate Apollo server with Express
-server.applyMiddleware({ app });
-const { ApolloServer } = require('apollo-server-express');
-const path = require('path');
-const { authMiddleware } = require('./utils/auth')
+// server.applyMiddleware({ app });
+// const { ApolloServer } = require('apollo-server-express');
+// const path = require('path');
+// const { authMiddleware } = require('./utils/auth')
 
-const { typeDefs, resolvers } = require('./schemas');
-const db = require('./config/connection');
+// const { typeDefs, resolvers } = require('./schemas');
+// const db = require('./config/connection');
 // const auth = require('./utils/auth');
 
 // const PORT = process.env.PORT || 3001; 
