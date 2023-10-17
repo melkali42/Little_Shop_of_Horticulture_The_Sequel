@@ -1,5 +1,5 @@
 {
-  "name": "mern-server",
+  "name": "Little_Shop_of_Horticulture_The_Sequel",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
     "watch": "nodemon",
-    "seed": "node seeders/seed.js"
+    "seed": "node seed/seed.js"
   },
   "keywords": [],
   "author": "",
