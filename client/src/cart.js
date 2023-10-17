@@ -1,6 +1,24 @@
 const cart = [];
 const favorites = [];
 
+const cartItems = document.querySelector('.cart-items');
+
+// Loop through the product data and create product cards
+products.forEach(product => {
+    const productCard = document.createElement('li');
+    productCard.innerHTML = `
+        <img src="${product.image_url}" alt="${product.name}">
+        <div class="item-details">
+        <h2>${product.name}</h2>
+        <p>Price: $${product.price}</p>
+        <p>Quantity: 2</p>
+        <button class="remove-item" data-product-id="${product.id}">Remove from Cart</button>
+        <button class="move-favorite" data-product-id="${product.id}">Add Item to Favorites</button>
+        </div>
+    `;
+    cartItems.appendChild(productCard);
+});
+
 // Function to add an item to the cart
 function addToCart(productDetails) {
     cart.push(productDetails);
