@@ -35,7 +35,7 @@ function Cart() {
                 <div className="carousel">
                     <p>Sign Up now with your email for a terrifying website-wide 10% discount!</p>
                 </div>
-                <nav>
+                {/*<nav>
                     <ul>
                         <li><a href="login.html">LogIn</a></li>
                         <li><a href="home.html">Home</a></li>
@@ -43,7 +43,7 @@ function Cart() {
                         <li><a href="favorites.html">Favorites</a></li>
                         <li><a href="about.html">About</a></li>
                     </ul>
-                </nav>
+                </nav>*/}
             </header>
         <main>
             <div className="flex" style={{ display: "inline-flex" }}>

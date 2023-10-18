@@ -8,13 +8,13 @@ return (
         <div className="carousel">
         <p>Sign Up now with your email for a terrifying website-wide 10% discount!</p>
         </div>
-        <nav>
+        {/*<nav>
         <ul>
             <li><a href="favorites">Favorites</a></li>
             <li><a href="cart">Cart</a></li>
             <li><a href="about">About</a></li>
         </ul>
-        </nav>
+        </nav>*/}
     </header>
     <main>
         <div className="flex" style={{ display: "inline-flex" }}>
