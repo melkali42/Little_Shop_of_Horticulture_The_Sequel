@@ -1,0 +1,181 @@
+* {
+    margin: 5;
+    padding: 2;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    background-color: #323232;
+    color: #fff;
+    display:flexbox;
+}
+
+body {
+    border-radius: 8px;
+    justify-content: center;
+}
+
+nav {
+    background-color: #1a1a1a;
+    display: flex;
+    border-radius: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display:inherit; 
+    padding: 8px; 
+    background-color: #1a1a1a;
+}
+
+nav li {
+    display: inline-flex;
+    margin-right: 20px; 
+    border-radius: 8px;
+
+}
+
+nav-link {
+    display: inline-flex;
+    margin-right: 20px; 
+    border-radius: 8px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px; 
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+nav a:hover {
+    background-color: rgb(227, 60, 116);;
+}
+
+/* Style for the product items */
+.product-list li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent gray */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1; 
+    max-width: calc(33.33% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+}
+
+.product-list a{
+    background-color:rgb(75, 75, 75);
+}
+
+.product-list a:hover {
+    background-color: rgb(140, 140, 239);
+}
+
+.product-list li:hover {
+    background-color: rgb(140, 140, 239);
+}
+
+input {
+    margin: 0.1 rem;
+    border-radius: 12px;
+    border: none;
+    background-color: #585858;
+    color: #1d1919;
+    padding: 0.2rem;
+}
+
+footer {
+    color: rgb(195, 157, 238);
+}
+
+p {
+    color: rgb(195, 157, 238);
+    font-weight: 320;
+}
+
+h1 {
+    color: rgb(180, 215, 180);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+    border-radius: 8px;
+    border: none;
+    background-color:#6c6bcb;
+    padding: 8px;
+    margin: 2 rem;
+    font-weight: bold;
+}
+
+#logout {
+    padding: 5px;
+    display: inline;
+    background-color: #323232;
+    color:rgb(227, 60, 116);
+}
+
+
+footer p{
+    margin-top:85%;
+    display: flex;
+}
+
+img{
+    margin: 0%;
+    justify-items: center;
+}
+
+nav img{
+    margin: 1rem;
+    justify-items: center;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+}
+
+button:hover {
+    background-color: rgb(140, 140, 239);
+}
+
+.carousel {
+    width: 100%; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*thank you chatgpt.com for the marquee help*/
+.carousel p {
+    display: inline-block;
+    margin: 0;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.product-columns {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-item {
+    width: calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+}
