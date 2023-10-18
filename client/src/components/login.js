@@ -1,8 +1,40 @@
-import React from 'react';
+import { React, useState } from 'react';
 import mainLogo from "../images/logo_png_300ppi.png"
+import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../utils/mutations'; // write mutation to login user
+import Auth from '../utils/clientAuth'; // write client side token authentication logic
 
+// this logic will create a login page that will allow users to login to their account, will need to create mutation to login user
 function Login() {
-return (
+    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [login] = useMutation(LOGIN_USER);
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const mutationResponse = await login({
+                variables: {
+                    email: formState.email,
+                    password: formState.password,
+                },
+            });
+            const token = mutationResponse.data.login.token;
+            Auth.login(token);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
+
+    return (
     <div>
     <header>
         <div className="carousel">
