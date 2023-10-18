@@ -1,3 +1,4 @@
+// written by Diana Bee
 const jwt = require('jsonwebtoken');
 const { GraphQLError } = require('graphql');
 const secret = 'mysecretsshhhhh'; // need to move this into an env variable
