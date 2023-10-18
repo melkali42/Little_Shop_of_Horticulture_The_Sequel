@@ -1,49 +1,25 @@
-
-import React from 'react';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Profile from './pages/Profile';
-import Header from './components/Header';
-import Footer from './components/Footer';
-
-const client = new ApolloClient({
-    uri: '/graphql',
-    cache: new InMemoryCache(),
-    });
-
-function App() {
-    return (
-        <ApolloProvider client={client}>
-            <div className="flex-column justify-flex-start min-100-vh">
-                <Header />
-                <div className="container">
-                    <Home />
-                    <Login />
-                    <Signup />
-                    <Profile />
-                </div>
-                <Footer />
-            </div>
-        </ApolloProvider>
-    );
-}
-
-export default App;
-
 // dependencies
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 // components/pages
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Home from './pages/Home';
-import Nav from './components/Nav'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import Login from './pages/Login';
+//import Signup from './pages/Signup';
+//import Home from './pages/Home';
+//import Nav from './components/Nav'
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Login from './components/login';
+import About from './components/about';
+import Home from './components/home';
+import Nav from './components/Nav';
+import Signup from './components/signup';
+import ProductList from './components/productList';
+import Favorites from './components/favorites';
+import Cart from './components/cart';
+import Products from './components/productInfo';
+
 
 const httpLink = createHttpLink({
     uri: '/graphql'
@@ -75,6 +51,11 @@ export default function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/signup" element={<Signup />} />
+                        <Route path="/about" element= {<About />} />
+                        <Route path="/productList" element= {<ProductList />} />
+                        <Route path="/productInfo" element= {<Products />} />
+                        <Route path="/favorites" element= {<Favorites />} />
+                        <Route path="/cart" element= {<Cart />} />
                     </Routes>
                 </section>
             </Router>
