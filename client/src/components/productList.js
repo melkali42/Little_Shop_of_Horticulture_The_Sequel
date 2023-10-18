@@ -9,11 +9,9 @@ return (
         </div>
         <nav>
         <ul>
-            <li><a href="login.html">LogIn</a></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="favorites.html">Favorites</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="favorites">Favorites</a></li>
+            <li><a href="cart">Cart</a></li>
+            <li><a href="about">About</a></li>
         </ul>
         </nav>
     </header>

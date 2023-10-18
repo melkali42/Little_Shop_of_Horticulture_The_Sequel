@@ -35,6 +35,13 @@ nav li {
 
 }
 
+nav-link {
+    display: inline-flex;
+    margin-right: 20px; 
+    border-radius: 8px;
+
+}
+
 nav a {
     text-decoration: none;
     color: #fff;
