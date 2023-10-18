@@ -1,36 +1,31 @@
 import React, { useState } from 'react';
 
+function calculateTotalPrice(cart) {
+  return cart.reduce((total, product) => total + product.price * product.quantity, 0);
+}
+
 function Cart() {
     const [cart, setCart] = useState([]);
-
-    function updateCartUI() {
-        return (
-            <div>
-                <h2>Cart Contents:</h2>
-                <ul>
-                    {cart.map((product, index) => (
-                        <li key={index}>
-                            {product.name} - ${product.price} - Quantity: {product.quantity}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        );
-    }
+    const [productDetails, setProductDetails] = useState({ name: 'Sample Product', price: 10 });
 
     function handleAddToCart(productToAdd) {
         const existingProductIndex = cart.findIndex(
-            (product) => product.name === productToAdd.name
+        (product) => product.name === productToAdd.name
         );
 
         if (existingProductIndex !== -1) {
-            const updatedCart = [...cart];
-            updatedCart[existingProductIndex].quantity++;
-            setCart(updatedCart);
+        const updatedCart = [...cart];
+        updatedCart[existingProductIndex].quantity++;
+        setCart(updatedCart);
         } else {
-            const updatedCart = [...cart, { ...productToAdd, quantity: 1 }];
-            setCart(updatedCart);
+        const updatedCart = [...cart, { ...productToAdd, quantity: 1 }];
+        setCart(updatedCart);
         }
+    }
+
+    function handleRemoveFromCart(productName) {
+        const updatedCart = cart.filter((product) => product.name !== productName);
+        setCart(updatedCart);
     }
 
     return (
@@ -49,78 +44,32 @@ function Cart() {
                     </ul>
                 </nav>
             </header>
-            <main>
-                <div className="flex" style={{ display: "inline-flex" }}>
-                    <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
-                    <h1>Your Shopping Cart</h1>
-                </div>
-                <ul className="cart-items">
-                    {cart.map((product, index) => (
-                        <li key={index}>
-                            {product.name} - ${product.price} - Quantity: {product.quantity}
-                        </li>
-                    ))}
-                </ul>
-                <button className="add-to-cart" onClick={() => handleAddToCart(productDetails)}>
-                    Add to Cart
-                </button>
-                <div className="cart-total">
-                    <h3>Total: ${calculateTotalPrice(cart)}</h3>
-                    <button className="checkout">Checkout</button>
-                </div>
-            </main>
-            <footer>
-                <p>&copy; 2023 Little Shop of Horticulture. All rights reserved.</p>
-            </footer>
-            {updateCartUI()}
+        <main>
+            <div className="flex" style={{ display: "inline-flex" }}>
+            <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+            <h1>Your Shopping Cart</h1>
+            </div>
+            <ul className="cart-items">
+            {cart.map((product, index) => (
+                <li key={index}>
+                {product.name} - ${product.price} - Quantity: {product.quantity}
+                <button onClick={() => handleRemoveFromCart(product.name)}>Remove from Cart</button>
+                </li>
+            ))}
+            </ul>
+            <button className="add-to-cart" onClick={() => handleAddToCart(productDetails)}>
+            Add to Cart
+            </button>
+            <div className="cart-total">
+            <h3>Total: ${calculateTotalPrice(cart)}</h3>
+            <button className="checkout">Checkout</button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 Little Shop of Horticulture. All rights reserved.</p>
+        </footer>
         </div>
     );
-return (
-    <div>
-    <header>
-        <div className="carousel">
-        <p>Sign Up now with your email for a terrifying website-wide 10% discount!</p>
-        </div>
-        <nav>
-        <ul>
-            <li><a href="productList">Products</a></li>
-            <li><a href="favorites">Favorites</a></li>
-            <li><a href="about">About</a></li>
-        </ul>
-        </nav>
-    </header>
-    <main>
-        <div className="flex" style={{ display: "inline-flex" }}>
-        <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
-        <h1>Your Shopping Cart</h1>
-        </div>
-        <ul class="cart-items">
-            <li>
-                <img src="product1.jpg" alt="Product 1"></img>
-                <div class="item-details">
-                    <h2>Product 1</h2>
-                    <p>Price: $99.99</p>
-                    <p>Quantity: 2</p>
-
-                    <button class="remove-item">Remove from Cart</button>
-                    <button class="move-favorite">Move Item to Favorites</button>
-                </div>
-            </li>
-            <li>
-            </li>
-        </ul>
-
-        <div class="cart-total">
-            <h3>Total: $199.98</h3>
-
-            <button class="checkout">Checkout</button>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2023 Little Shop of Horticulture. All rights reserved.</p>
-    </footer>
-    </div>
-);
 }
 
 export default Cart;
