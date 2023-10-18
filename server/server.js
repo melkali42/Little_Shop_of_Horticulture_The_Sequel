@@ -32,7 +32,7 @@ const app = express();
     
 
 // Add middleware to integrate Apollo server with Express
-server.applyMiddleware({ app });
+// server.applyMiddleware({ app });
 
 
 

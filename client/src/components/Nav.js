@@ -15,8 +15,11 @@ export default function Navigation() {
                     <Navbar bg='light' expand='lg'>
                         <Nav variant='tabs'>
                             <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                            <Nav.Link as={Link} to='/profile'>Profile</Nav.Link>
+                            <Nav.Link as={Link} to='/productList'>Product List</Nav.Link>
+                            <Nav.Link as={Link} to='/productInfo'>Product Info</Nav.Link>
+                            <Nav.Link as={Link} to='/favorites'>Favorites</Nav.Link>
                             <Nav.Link as={Link} to='/orders'>Orders</Nav.Link>
+                            <Nav.Link as={Link} to='/cart'>Cart</Nav.Link>
                             <a href='/' onClick={() => Auth.logout()}>Logout</a> {/* this will take the user back to the homepage and refresh the app */}
                         </Nav>
                     </Navbar>
@@ -30,6 +33,7 @@ export default function Navigation() {
                             <Nav.Link as={Link} to='/'>Home</Nav.Link>
                             <Nav.Link as={Link} to='/login'>Login</Nav.Link>
                             <Nav.Link as={Link} to='/signup'>Signup</Nav.Link>
+                            <Nav.Link as={Link} to='/about'>About</Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>
