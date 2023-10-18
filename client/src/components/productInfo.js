@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+
+function ProductInfo({ name, price }) {
+    const [cart, setCart] = useState([]);
+
+    const handleAddToCart = () => {
+        const productDetails = {
+            name: name,
+            price: price,
+        };
+
+    setCart([...cart, productDetails]);
+    };
+=======
 import React from 'react';
 import mainLogo from "../images/logo_png_300ppi.png"
+>>>>>>> develop
 
-function ProductInfo() {
 return (
     <div>
     <header>
@@ -29,7 +44,10 @@ return (
         <p id="product-difficulty">Difficulty: </p>
         <p id="product-price">Price: </p>
         <button className="add-favorite">Add to Favorites</button>
-        <button className="add-to-cart">Add to Cart</button>
+        <button className="add-to-cart" onClick={handleAddToCart}>
+        Add to Cart
+        </button>
+
     </main>
     <footer>
         <p>&copy; 2023 Little Shop of Horticulture. All rights reserved.</p>
