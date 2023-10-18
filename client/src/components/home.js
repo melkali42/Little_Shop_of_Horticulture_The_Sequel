@@ -20,7 +20,7 @@ return (
     <main>
         <h1>Welcome to Our Online Store</h1>
         <p>Explore our wide range of products and find great deals!</p>
-        <img src="/public/images/logo_BG_final.png"  style= {{ width: "100%", height: "auto" }} />
+        <img src="/client/public/images/logo_BG_final.png"  alt="logo" style= {{ width: "100%", height: "auto" }} />
     </main>
     <footer>
         <p>&copy; 2023 Little Shop of Horticulture. All rights reserved.</p>
