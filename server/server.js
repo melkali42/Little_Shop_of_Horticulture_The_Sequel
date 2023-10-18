@@ -22,7 +22,7 @@ const server = new ApolloServer({
 const app = express();
 
 //Connect to database
-connectDB();
+// connectDB();
 
 app.use('graphql', graphqlHTTP({
     schema,
