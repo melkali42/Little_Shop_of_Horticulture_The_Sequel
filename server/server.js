@@ -1,15 +1,16 @@
 const express = require('express');
-require('dotenv').config();
+// require('dotenv').config();
 // Import the ApolloServer class
 const { ApolloServer } = require('apollo-server-express');
-const { graphqlHTTP } = require('express-graphql');
-const schema = require('./schema/schema');
-constconnectDB = require('./config/db');
+// const { graphqlHTTP } = require('express-graphql');
+// const schema = require('./schema/schema');
+// constconnectDB = require('./config/db');
 // Import the two parts of a GraphQL schema
-const typeDefs = require('./schema');
+const { typeDefs, resolvers} = require('./schemas');
 const db = require('./config/connection');
-const connectDB = require('./config/db');
-const auth = require('./utils/auth');
+// const connectDB = require('./config/db');
+// const auth = require('./utils/auth');
+const { authMiddleware } = require('./utils/auth');
 
 
 const PORT = process.env.PORT || 3001;
@@ -22,12 +23,12 @@ const server = new ApolloServer({
 const app = express();
 
 //Connect to database
-connectDB();
+// connectDB();
 
-app.use('graphql', graphqlHTTP({
+/*app.use('graphql', graphqlHTTP({
     schema,
     graphiql: process.env.NODE_ENV === 'development',
-}));
+})); */
     
 
 // Add middleware to integrate Apollo server with Express

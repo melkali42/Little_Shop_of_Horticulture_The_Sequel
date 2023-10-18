@@ -1,16 +1,14 @@
-
-const typeDefs = gql`
+// no need to import gql here
+// revised User object to match User model & added Order object to match db
+const typeDefs = `
 type User {
-    _id: ID
-    firstName: String
-    lastName: String
-    email: String
-    password: String
+    _id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    order: [Order]
     location: String
-    createdAt: String
-    products: [Product]
-    careTips: [CareTip]
-    
 }
 
 type Tips {
@@ -20,9 +18,14 @@ type Tips {
 }
 
 type Product {
+    _id: ID
     name: String
     purchaser: String
-    careTips: [CareTip]
+    careTips: [Tips]
+}
+
+type Order {
+    products: [Product]
 }
 
 type Auth {
@@ -32,11 +35,12 @@ type Auth {
 
 type Query {
     user: User
+    users: [User]
 }
 
 type Mutation {
     login(email: String!, password: String!): Auth
-    signup(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    signUp(firstName: String!, lastName: String!, email: String!, password: String!): Auth
 
 }
 
