@@ -1,4 +1,5 @@
 import React from 'react';
+import mainLogo from "../images/logo_png_300ppi.png"
 
 function ProductList() {
 return (
@@ -17,7 +18,7 @@ return (
     </header>
     <main>
         <div className="flex" style={{ display: "inline-flex" }}>
-        <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+        <img src={mainLogo} alt="Logo" style={{ width: "100px", height: "90px" }} />
         </div>
         <ul className="product-list">
         <h1>Plant Store - Products</h1>

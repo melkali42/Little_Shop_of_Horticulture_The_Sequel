@@ -1,4 +1,5 @@
 import React from 'react';
+import mainLogo from "../images/logo_png_300ppi.png"
 
 function Login() {
 return (
@@ -18,7 +19,7 @@ return (
     </header>
     <main>
         <div className="flex" style={{ display: "inline-flex" }}>
-        <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+        <img src={mainLogo} alt="Logo" style={{ width: "100px", height: "90px" }} />
         <h1>Login Page</h1>
         </div>
         <form>
