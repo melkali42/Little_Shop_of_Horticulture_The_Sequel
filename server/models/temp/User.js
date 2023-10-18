@@ -70,6 +70,19 @@ userSchema.virtual('fullName').get(function () {
     this.lastName = lastName;
 })
 
+userSchema.virtual('orderHistoryDetails').get(async function () {
+    const populatedUser = await this.populate('orderHistory').execPopulate();
+    const orderHistory = populatedUser.orderHistory;
+    const orderHistoryDetails = [];
+
+    for (const order of orderHistory) {
+        const productDetails = await Product.find({ _id: { $in: order.products } });
+        orderHistoryDetails.push({ order, products: productDetails });
+    }
+
+    return orderHistoryDetails;
+});
+
 const User = model('User', userSchema);
 
 module.exports = User;
