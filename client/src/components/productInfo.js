@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 function ProductInfo({ name, price }) {
@@ -11,6 +12,10 @@ function ProductInfo({ name, price }) {
 
     setCart([...cart, productDetails]);
     };
+=======
+import React from 'react';
+import mainLogo from "../images/logo_png_300ppi.png"
+>>>>>>> develop
 
 return (
     <div>
@@ -29,7 +34,7 @@ return (
     </header>
     <main>
         <div className="flex" style={{ display: "inline-flex" }}>
-        <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+        <img src={mainLogo} alt="Logo" style={{ width: "100px", height: "90px" }} />
         <h1>Product Details</h1>
         </div>
         <h2 id="product-name">Product Name</h2>

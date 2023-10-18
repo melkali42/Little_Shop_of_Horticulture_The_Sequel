@@ -1,4 +1,5 @@
 import React from 'react';
+import mainLogo from "../images/logo_png_300ppi.png"
 
 export function About() {
 return (
@@ -18,7 +19,7 @@ return (
     <main>
         <div className="flex" style={{ display: "inline-flex" }}>
         <div>
-        <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+        <img src={mainLogo} alt="Logo" style={{ width: "100px", height: "90px" }} />
         </div>
         <h1>About Us</h1>
         </div>

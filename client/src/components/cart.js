@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import mainLogo from "../images/logo_png_300ppi.png"
 
 function calculateTotalPrice(cart) {
   return cart.reduce((total, product) => total + product.price * product.quantity, 0);
