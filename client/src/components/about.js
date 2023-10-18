@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About() {
+export function About() {
 return (
     <div>
     <header>
@@ -9,19 +9,20 @@ return (
         </div>
         <nav>
         <ul>
-            <li><a href="login.html">LogIn</a></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="productList.html">Products</a></li>
-            <li><a href="favorites.html">Favorites</a></li>
-            <li><a href="cart.html">Cart</a></li>
+            <li><a href="productList">Products</a></li>
+            <li><a href="favorites">Favorites</a></li>
+            <li><a href="cart">Cart</a></li>
         </ul>
         </nav>
     </header>
     <main>
         <div className="flex" style={{ display: "inline-flex" }}>
+        <div>
         <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+        </div>
         <h1>About Us</h1>
         </div>
+
         <p>Welcome to our sinister world of flora, where the line between beauty and terror blurs beneath the moonlit sky. At our eerie plant emporium, we specialize in delivering an experience that combines the alluring mystique of the supernatural with the enchanting allure of plants.</p>
 
         <p>Step into our virtual nursery, where rare and peculiar plant specimens await your discovery. From carnivorous flora with insatiable appetites to delicate blossoms that thrive in the shadows, our collection is a celebration of nature's dark and enigmatic side.</p>
@@ -35,7 +36,9 @@ return (
         <p>Prepare to be transported to a realm where darkness and growth intertwine. We pledge to bring you not just plants, but artifacts of otherworldly beauty, thriving on the fringes of the unknown. Our mission is to deliver a captivating experience that goes beyond the ordinary.</p>
             
         <p>Dare you embark on this journey into the realm of the mysterious and macabre? Welcome to the enigma of our cursed garden, where nature's secrets and horror's allure entwine. Now... Shall we?</p>
+
     </main>
+    
     <footer>
         <p>&copy; 2023 Little Shop of Horticulture. All rights reserved.</p>
     </footer>
