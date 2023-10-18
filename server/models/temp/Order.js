@@ -10,9 +10,15 @@ const orderSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: 'Product'
         }
-    ]
+    ],
+    userId: String,
+    totalAmount: Number
 });
 
 const Order = model('Order', orderSchema);
+
+Order.createOrder = function (orderData) {
+    return this.create(orderData);
+};
 
 module.exports = Order;

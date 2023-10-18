@@ -1,38 +1,7 @@
-import { React, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations'; // write mutation to login user
-import Auth from '../utils/clientAuth'; // write client side token authentication logic
+import React from 'react';
+import mainLogo from "../images/logo_png_300ppi.png"
 
-// this logic will create a login page that will allow users to login to their account, will need to create mutation to login user
-function Login(props) {
-    const [formState, setFormState] = useState({ email: '', password: '' });
-    const [login] = useMutation(LOGIN_USER);
-
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            const mutationResponse = await login({
-                variables: {
-                    email: formState.email,
-                    password: formState.password,
-                },
-            });
-            const token = mutationResponse.data.login.token;
-            Auth.login(token);
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormState({
-            ...formState,
-            [name]: value,
-        });
-    };
-
+function Login() {
 return (
     <div>
     <header>
@@ -50,7 +19,7 @@ return (
     </header>
     <main>
         <div className="flex" style={{ display: "inline-flex" }}>
-        <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+        <img src={mainLogo} alt="Logo" style={{ width: "100px", height: "90px" }} />
         <h1>Login Page</h1>
         </div>
         <div>

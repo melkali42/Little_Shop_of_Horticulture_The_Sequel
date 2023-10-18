@@ -2,6 +2,8 @@ const { Schema, model } =  require('mongoose');
 const bcrypt = require('bcrypt');
 const Order = require('./Order')
 
+const mongoose = require('mongoose');
+
 // find a way to not transmit hashed password?
 // add virtuals to get full name and to get all products and care tips for a user
 // might need to revise to add order history
@@ -69,6 +71,19 @@ userSchema.virtual('fullName').get(function () {
     this.firstName = firstName;
     this.lastName = lastName;
 })
+
+userSchema.virtual('orderHistoryDetails').get(async function () {
+    const populatedUser = await this.populate('orderHistory').execPopulate();
+    const orderHistory = populatedUser.orderHistory;
+    const orderHistoryDetails = [];
+
+    for (const order of orderHistory) {
+        const productDetails = await Product.find({ _id: { $in: order.products } });
+        orderHistoryDetails.push({ order, products: productDetails });
+    }
+
+    return orderHistoryDetails;
+});
 
 const User = model('User', userSchema);
 
