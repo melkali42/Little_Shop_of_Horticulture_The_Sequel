@@ -11,6 +11,7 @@ const db = require('./config/connection');
 const connectDB = require('./config/db');
 const auth = require('./utils/auth');
 
+
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
     typeDefs,
@@ -31,6 +32,8 @@ app.use('graphql', graphqlHTTP({
 
 // Add middleware to integrate Apollo server with Express
 server.applyMiddleware({ app });
+
+
 
 const path = require('path');
 
@@ -63,4 +66,5 @@ const startApolloServer = async () => {
 }
 // Start the Apollo server
 startApolloServer();
+
 
