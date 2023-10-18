@@ -31,8 +31,11 @@ app.use('graphql', graphqlHTTP({
     
 
 // Add middleware to integrate Apollo server with Express
-// server.applyMiddleware({ app });
+server.applyMiddleware({ app });
 
+
+
+const path = require('path');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -63,6 +66,5 @@ const startApolloServer = async () => {
 }
 // Start the Apollo server
 startApolloServer();
-
 
 
