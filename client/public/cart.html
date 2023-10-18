@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="/client/src/index.css">
+
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <header>
+        <div class="carousel">
+            <p>Sign Up now with your email for a terrifying website wide 10% discount!</p>
+        </div>   
+
+    </header>
+
+    <main>
+        <div class="flex" style="display: inline-flex; ">
+            <img src="/public/images/logo_png_300ppi.png" alt="Logo" style="width: 100px; height: 90px;"></img>
+            <h1>Your Shopping Cart</h1>
+        </div>
+
+        <ul class="cart-items">
+            <li>
+                <img src="product1.jpg" alt="Product 1">
+                <div class="item-details">
+                <h2>Product 1</h2>
+                <p>Price: $99.99</p>
+                <p>Quantity: 2</p>
+                <button class="remove-item" data-product-id="1">Remove from Cart</button>
+                <button class="move-favorite" data-product-id="1">Add Item to Favorites</button>
+                </div>
+            </li>
+        </ul>
+
+        <div class="cart-total">
+            <h3>Total: $199.98</h3>
+
+            <button class="checkout">Checkout</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Friendly Fiends. All rights reserved.</p>
+    </footer>
+
+<style>
+    button {
+        cursor: pointer;
+    }
+</style>
+
+</body>
+
+<script src="/client/src/index.js"></script>
+
+</html>

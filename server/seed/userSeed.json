@@ -1,0 +1,29 @@
+[
+    {
+        "firstName": "Seymour",
+        "lastName": "Krelborn",
+        "email": "plant.enjoyer1@email.com",
+        "password": "iloveplants",
+        "products": [],
+        "careTips": [],
+        "location": "New York, NY"
+    },
+    {
+        "firstName": "Audrey",
+        "lastName": "Plant",
+        "email": "people.enjoyer2@email.com",
+        "password": "feedme33",
+        "products": [],
+        "careTips": [],
+        "location": "New York, NY"
+    },
+    {
+        "firstName": "Orin",
+        "lastName": "Scivello",
+        "email": "biker.dentist@email.com",
+        "password": "ilikep@in",
+        "products": [],
+        "careTips": [],
+        "location": "New York, NY"
+    }
+]
