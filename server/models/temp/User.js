@@ -2,6 +2,8 @@ const { Schema, model } =  require('mongoose');
 const bcrypt = require('bcrypt');
 const Order = require('./Order')
 
+const mongoose = require('mongoose');
+
 // find a way to not transmit hashed password?
 // add virtuals to get full name and to get all products and care tips for a user
 // might need to revise to add order history
