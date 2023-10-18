@@ -51,8 +51,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-const productRoutes = require('./routes/productRoutes');
-app.use('/api', productRoutes);
+// const productRoutes = require('./routes/productRoutes');
+// app.use('/api', productRoutes);
 
 const startApolloServer = async () => {
     await server.start();
