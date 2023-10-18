@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function ProductInfo({ name, price }) {
     const [cart, setCart] = useState([]);
@@ -11,7 +11,7 @@ function ProductInfo({ name, price }) {
 
     setCart([...cart, productDetails]);
     };
-    
+
 return (
     <div>
     <header>
