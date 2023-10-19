@@ -1,3 +1,4 @@
+/*
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/little-shop-db', {
@@ -6,8 +7,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/little-sh
 })
 
 module.exports = mongoose.connection;
+*/
 
-/*
 // made some revisions to initialize db connection
 
 const { connect, connection } = require('mongoose');
@@ -17,7 +18,7 @@ const connectDB = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/little-s
 connect(connectDB);
 
 module.exports = connection;
-*/
+
 
 
 
