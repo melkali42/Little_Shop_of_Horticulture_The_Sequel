@@ -37,7 +37,10 @@ function ProductList() {
                     <li key={index}>
                         <p>{product.description} - <strong>${product.price}</strong></p>
                         <img src={product.image_url} alt="product" style={{ width: "150px", height: "140px" }} />
-                        <button style={{display: "block"}}>Add to Cart</button>
+                        <div>
+                            <button style={{display: "inline-block", padding: "10px", margin: "10px"}}>Add to Favorites</button>
+                            <button style={{display: "inline-block", padding: "10px", margin: "10px"}}>Add to Cart</button>
+                        </div>
                     </li>
                     
                 ))}
