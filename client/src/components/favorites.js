@@ -21,12 +21,12 @@ return (
         <img src={mainLogo} alt="Logo" style={{ width: "100px", height: "90px" }} />
         <h1>Your Favorite Items</h1>
         </div>
-        <ul class="favorite-items">
+        <ul class="favorite-items" style={{listStyle: "none"}}>
 
             <li>
-                <img src="product1.jpg" alt="Product 1"></img>
-                <h3>Product 1</h3>
-                <p>Price: $99.99</p>
+                <img src="https://www.gardendesign.com/pictures/images/900x705Max/site_3/snsevieria-trifasciata-laurentii-houseplant-green-leaves-shutterstock-com_14449.jpg" alt="Product 1"></img>
+                <h3>Spider Plant</h3>
+                <p>Price: $14.99</p>
                 <button class="remove-favorite">Remove from Favorites</button>
             </li>
     </ul>

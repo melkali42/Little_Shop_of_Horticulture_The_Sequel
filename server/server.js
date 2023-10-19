@@ -11,6 +11,7 @@ const db = require('./config/connection');
 // const connectDB = require('./config/db');
 // const auth = require('./utils/auth');
 const { authMiddleware } = require('./utils/auth');
+const productRoutes = require('./routes/productRoutes');
 
 
 const PORT = process.env.PORT || 3001;
@@ -51,8 +52,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-// const productRoutes = require('./routes/productRoutes');
-// app.use('/api', productRoutes);
+
+app.use(productRoutes);
 
 const startApolloServer = async () => {
     await server.start();
