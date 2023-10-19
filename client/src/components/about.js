@@ -1,5 +1,6 @@
 import React from 'react';
 import mainLogo from "../images/logo_png_300ppi.png"
+import gif from "../images/gif.mp4"
 
 export function About() {
 return (
@@ -37,6 +38,8 @@ return (
         <p>Prepare to be transported to a realm where darkness and growth intertwine. We pledge to bring you not just plants, but artifacts of otherworldly beauty, thriving on the fringes of the unknown. Our mission is to deliver a captivating experience that goes beyond the ordinary.</p>
             
         <p>Dare you embark on this journey into the realm of the mysterious and macabre? Welcome to the enigma of our cursed garden, where nature's secrets and horror's allure entwine. Now... Shall we?</p>
+
+        <img src={gif} alt="gif" style={{ width: "100px", height: "auto"}} />
 
     </main>
     
