@@ -35,9 +35,11 @@ function ProductList() {
                 {/*map products into an array to display on page */}
                 {products.map((product, index) => (
                     <li key={index}>
-                        <p>{product.description}: {product.price}</p>
-                        <img src={product.image_url} alt="product" style={{ width: "50px", height: "40px" }} />
+                        <p>{product.description} - <strong>${product.price}</strong></p>
+                        <img src={product.image_url} alt="product" style={{ width: "150px", height: "140px" }} />
+                        <button style={{display: "block"}}>Add to Cart</button>
                     </li>
+                    
                 ))}
             </ul>
             </ul>
