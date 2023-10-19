@@ -11,6 +11,7 @@ router.get('/products', async (req, res) => {
         
        // Extract the image_url and description fields from each product
         const productData = products.map(product => ({
+            name: product.name,
             image_url: product.image_url,
             description: product.description,
             price: product.price
