@@ -14,9 +14,9 @@ We used CSS, React, Mongo DB, Mongoose ODM, Graph QL, Node.js, Express.js, Herok
 
 ## Usage
 
-This is the URL for the deployed Heroku application: 
+This is the URL for the deployed Heroku application: https://little-shop-of-horticulture-2-da58dc40d253.herokuapp.com/
 
-This is the URL for our GitHub repository for this project:
+This is the URL for our GitHub repository for this project: https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel
 
 Screenshots:
 

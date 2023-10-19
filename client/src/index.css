@@ -179,3 +179,28 @@ button:hover {
     margin: 10px;
     text-align: center;
 }
+
+.nav-link{
+    background-color: #1a1a1a;
+    color: rgb(180, 215, 180);
+    padding: 10px;
+    margin:15px;
+}
+
+.navbar-nav.nav-tabs{
+    background-color: #1a1a1a;
+    color: #fff;
+    margin:20px;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #1a1a1a;
+    color: #fff;
+    
+}
+
+.justify-content-center.container{
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
