@@ -41,16 +41,21 @@ function ProductInfo({ name, price }) {
             <img src={mainLogo} alt="Logo" style={{ width: "100px", height: "90px" }} />
             <h1>Product Details</h1>
             </div>
-            <h2 id="product-name">Spider Plant</h2>
-            <img id="product-image" src="https://www.gardendesign.com/pictures/images/900x705Max/site_3/snsevieria-trifasciata-laurentii-houseplant-green-leaves-shutterstock-com_14449.jpg" alt="Product Image" style={{ maxWidth: "300px" }} />
-            <p id="product-description">Description: A sturdy, upright plant with long, sword-like leaves that come in various patterns and colors.</p>
-            <p id="product-tip"></p>
-            <p id="product-difficulty">Difficulty: easy</p>
-            <p id="product-price">Price: $14.99</p>
-            <button className="add-favorite">Add to Favorites</button>
-            <button className="add-to-cart" onClick={handleAddToCart}>
-            Add to Cart
-            </button>
+            {products.map((product, index) => (
+                <div key={index}>
+                    <h2 id="product-name">{product.name}</h2>
+                    <img id="product-image" src={product.image_url} alt="Product Image" style={{ maxWidth: "300px" }} />
+                    <p id="product-description">Description: {product.description}</p>
+                    <p id="product-tip"></p>
+                    <p id="product-difficulty">Difficulty: {product.difficulty}</p>
+                    <p id="product-price">Price: ${product.price}</p>
+                    <button className="add-favorite">Add to Favorites</button>
+                    <button className="add-to-cart" onClick={handleAddToCart}>
+                    Add to Cart
+                    </button>
+                </div> 
+            ))}
+            
     
         </main>
         <footer>

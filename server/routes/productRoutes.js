@@ -14,7 +14,8 @@ router.get('/products', async (req, res) => {
             name: product.name,
             image_url: product.image_url,
             description: product.description,
-            price: product.price
+            price: product.price,
+            difficulty: product.difficulty,
         }));
 
         // Send the product data to the client
