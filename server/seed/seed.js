@@ -31,7 +31,7 @@ db.once('open', async () => {
         order: [{productSeed}],
         location: "New York, NY"
       })
-      console.log({productSeed});
+      // console.log({productSeed});
       /* await Order.insertMany({
         products: [
             productSeed[0],
