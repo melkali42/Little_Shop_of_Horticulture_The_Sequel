@@ -16,8 +16,8 @@ db.once('open', async () => {
       await User.create(userSeed);
       console.log('users seeded');
 
-      await Product.create(productSeed);
-      console.log('products seeded');
+      /*await Product.create(productSeed);
+      console.log('products seeded'); */
 
       await CareTip.create(careTipSeed);
       console.log('care tips seeded');
