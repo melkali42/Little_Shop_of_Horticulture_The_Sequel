@@ -47,7 +47,7 @@ function ProductInfo({ name, price }) {
                     <img id="product-image" src={product.image_url} alt="Product Image" style={{ maxWidth: "300px" }} />
                     <p id="product-description">Description: {product.description}</p>
                     <p id="product-tip"></p>
-                    <p id="product-difficulty">Difficulty: {product.difficulty}</p>
+                    <p id="product-difficulty">Difficulty: {product.difficulty_level}</p>
                     <p id="product-price">Price: ${product.price}</p>
                     <button className="add-favorite">Add to Favorites</button>
                     <button className="add-to-cart" onClick={handleAddToCart}>
