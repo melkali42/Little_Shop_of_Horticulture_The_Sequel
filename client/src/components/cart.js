@@ -47,7 +47,7 @@ function Cart() {
             </header>
         <main>
             <div className="flex" style={{ display: "inline-flex" }}>
-            <img src="/public/images/logo_png_300ppi.png" alt="Logo" style={{ width: "100px", height: "90px" }} />
+            <img src={mainLogo} style={{ width: "100px", height: "90px" }} />
             <h1>Your Shopping Cart</h1>
             </div>
             <ul className="cart-items">
