@@ -64,6 +64,34 @@ db.once('open', async () => {
                     "price": 20.99,
                     "image_url": "https://edsplantshop.com/cdn/shop/products/zamioculcas-zamiifolia-zz-plant-482544.jpg?v=1691421590"
                 },
+                {
+                    "name": "Maidenhair Fern",
+                    "description": "A delicate fern with fan-shaped fronds and a soft, airy appearance.",
+                    "difficulty_level": "difficult",
+                    "price": 32.99,
+                    "image_url": "https://m.media-amazon.com/images/I/71du5QOSj+L._AC_UF894,1000_QL80_.jpg"
+                },
+                {
+                    "name": "Begonia Rex",
+                    "description": "A stunning foliage plant with colorful, textured leaves in various patterns.",
+                    "difficulty_level": "difficult",
+                    "price": 34.99,
+                    "image_url": "https://www.whiteflowerfarm.com/mas_assets/cache/image/9/0/7/3/36979.Jpg"
+                },
+                {
+                    "name": "String of Hearts",
+                    "description": "A trailing succulent with heart-shaped leaves that's visually appealing but requires specific care.",
+                    "difficulty_level": "moderate",
+                    "price": 33.99,
+                    "image_url": "https://www.myhomenature.com/media/catalog/product/cache/6bd3477fa2f2a68d55e0c78c947906e5/v/a/variegated_chain_of_hearts_ceropegia_woodii_varieg_.jpg"
+                },
+                {
+                    "name": "Ficus Bonsai",
+                    "description": "A bonsai version of the Ficus plant, requiring careful pruning and maintenance.",
+                    "difficulty_level": "difficult",
+                    "price": 349.99,
+                    "image_url": "https://www.bonsaiboy.com/catalog/media/k3461.jpg"
+                }
             ]
         )
     } catch(err) {
