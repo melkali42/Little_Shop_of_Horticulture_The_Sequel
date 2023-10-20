@@ -1,3 +1,4 @@
+// Jeff T contributed
 // no need to import gql here
 // revised User object to match User model & added Order object to match db
 const typeDefs = `
