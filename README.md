@@ -20,13 +20,13 @@ This is the URL for our GitHub repository for this project: https://github.com/m
 
 Screenshots:
 
- ![Screenshot1]()
- ![Screenshot2]()
- ![Screenshot3]()
- ![Screenshot4]()
- ![Screenshot5]()
- ![Screenshot6]()
- ![Screenshot7]()
+ ![Screenshot1](https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel/blob/main/client/src/images/Screenshot%202023-10-19%20at%203.07.23%20PM.png)
+ ![Screenshot2](https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel/blob/main/client/src/images/Screenshot%202023-10-19%20at%203.07.40%20PM.png)
+ ![Screenshot3](https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel/blob/main/client/src/images/Screenshot%202023-10-19%20at%203.07.59%20PM.png)
+ ![Screenshot4](https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel/blob/main/client/src/images/Screenshot%202023-10-19%20at%203.08.17%20PM.png)
+ ![Screenshot5](https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel/blob/main/client/src/images/Screenshot%202023-10-19%20at%205.10.44%20PM.png)
+ ![Screenshot6](https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel/blob/main/client/src/images/Screenshot%202023-10-19%20at%205.11.00%20PM.png)
+ ![Screenshot7](https://github.com/melkali42/Little_Shop_of_Horticulture_The_Sequel/blob/main/client/src/images/image.png)
 
 
 ## Credits
